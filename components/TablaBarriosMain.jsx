@@ -17,7 +17,7 @@ export default function TableBarriosMain({data}){
     let dataSet1 = []
     let dataSett2=[]
     useEffect(()=>{getTableData()},[])
-    getTableData()
+
 
     async function getTableData(){
 
@@ -33,7 +33,7 @@ export default function TableBarriosMain({data}){
             throw new Error('Failed to fetch data');
         }
 
-        
+        dataSet1.splice(0,dataSet1.length);
         respuesta.data.forEach((element)=>{
             dataSet1.push([
               
